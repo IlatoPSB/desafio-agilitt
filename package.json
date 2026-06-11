@@ -2,8 +2,9 @@
   "name": "desafio-estagio",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,7 +14,7 @@
   "dependencies": {
     "bcrypt": "^6.0.0",
     "dotenv": "^17.4.2",
-    "ejs": "^6.0.1",
+    "ejs": "^3.1.10",
     "express": "^5.2.1",
     "express-session": "^1.19.0",
     "mysql2": "^3.22.5"
