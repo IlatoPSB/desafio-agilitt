@@ -16,6 +16,10 @@ app.use(express.json());
 
 app.set('view engine', 'ejs');
 
+app.get('/health', (req, res) => {
+    res.send('OK');
+});
+
 app.get('/', (req, res) => {
     res.render('register');
 });
