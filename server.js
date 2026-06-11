@@ -4,6 +4,13 @@ const express = require('express');
 const bcrypt = require('bcrypt');
 const db = require('./db');
 
+process.on('uncaughtException', (err) => {
+    console.error('UNCAUGHT EXCEPTION:', err);
+});
+
+process.on('unhandledRejection', (err) => {
+    console.error('UNHANDLED REJECTION:', err);
+});
 const app = express();
 app.use(session({
     secret: 'meu-segredo-super-secreto',
@@ -117,6 +124,9 @@ app.get('/logout', (req, res) => {
 });
 const PORT = process.env.PORT || 3000;
 
+console.log('Cheguei antes do app.listen');
+
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
+    console.log('Servidor iniciado com sucesso');
 });
