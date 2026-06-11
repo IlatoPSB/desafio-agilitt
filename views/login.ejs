@@ -1,37 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-light">
 
-    <h1>Login</h1>
+<div class="container vh-100 d-flex justify-content-center align-items-center">
 
-    <form action="/login" method="POST">
+    <div class="card shadow p-4" style="width: 400px;">
 
-        <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            required
-        >
+        <h2 class="text-center mb-4">Login</h2>
 
-        <br><br>
+        <form action="/login" method="POST">
 
-        <input
-            type="password"
-            name="senha"
-            placeholder="Senha"
-            required
-        >
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input
+                    type="email"
+                    name="email"
+                    class="form-control"
+                    required
+                >
+            </div>
 
-        <br><br>
+            <div class="mb-3">
+                <label class="form-label">Senha</label>
+                <input
+                    type="password"
+                    name="senha"
+                    class="form-control"
+                    required
+                >
+            </div>
 
-        <button type="submit">
-            Entrar
-        </button>
+            <button type="submit" class="btn btn-success w-100">
+                Entrar
+            </button>
 
-    </form>
+        </form>
+
+        <div class="text-center mt-3">
+            <a href="/">Criar uma conta</a>
+        </div>
+
+    </div>
+
+</div>
 
 </body>
 </html>

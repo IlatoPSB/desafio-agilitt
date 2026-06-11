@@ -1,46 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-light">
 
-    <h1>Cadastro de Usuário</h1>
+<div class="container vh-100 d-flex justify-content-center align-items-center">
 
-    <form action="/register" method="POST">
+    <div class="card shadow p-4" style="width: 400px;">
 
-        <input
-            type="text"
-            name="nome"
-            placeholder="Nome"
-            required
-        >
+        <h2 class="text-center mb-4">Cadastro</h2>
 
-        <br><br>
+        <form action="/register" method="POST">
 
-        <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            required
-        >
+            <div class="mb-3">
+                <label class="form-label">Nome</label>
+                <input
+                    type="text"
+                    name="nome"
+                    class="form-control"
+                    required
+                >
+            </div>
 
-        <br><br>
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input
+                    type="email"
+                    name="email"
+                    class="form-control"
+                    required
+                >
+            </div>
 
-        <input
-            type="password"
-            name="senha"
-            placeholder="Senha"
-            required
-        >
+            <div class="mb-3">
+                <label class="form-label">Senha</label>
+                <input
+                    type="password"
+                    name="senha"
+                    class="form-control"
+                    required
+                >
+            </div>
 
-        <br><br>
+            <button type="submit" class="btn btn-primary w-100">
+                Cadastrar
+            </button>
 
-        <button type="submit">
-            Cadastrar
-        </button>
+        </form>
 
-    </form>
+        <div class="text-center mt-3">
+            <a href="/login">Já possui conta? Entrar</a>
+        </div>
+
+    </div>
+
+</div>
 
 </body>
 </html>
