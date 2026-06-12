@@ -57,7 +57,7 @@ app.post('/register', async (req, res) => {
                     return res.send('Erro ao cadastrar usuário.');
                 }
 
-                res.send('Usuário cadastrado com sucesso!');
+                res.redirect('/login');
             }
         );
 
