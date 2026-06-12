@@ -12,6 +12,10 @@ process.on('unhandledRejection', (err) => {
     console.error('UNHANDLED REJECTION:', err);
 });
 const app = express();
+app.get('/health', (req, res) => {
+    console.log('Health check acessado');
+    res.status(200).send('OK');
+});
 app.use(session({
     secret: 'meu-segredo-super-secreto',
     resave: false,
