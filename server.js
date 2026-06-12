@@ -126,16 +126,10 @@ app.get('/logout', (req, res) => {
     });
 
 });
-const PORT = process.env.PORT || 3000;
 
-console.log('Cheguei antes do app.listen');
 
-const server = app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Servidor rodando na porta ${PORT}`);
-});
-
-server.on('error', (err) => {
-    console.error('ERRO NO SERVIDOR:', err);
+app.listen(3000, () => {
+    console.log('Servidor rodando em http://localhost:3000');
 });
 
 console.log('Servidor iniciado com sucesso');
