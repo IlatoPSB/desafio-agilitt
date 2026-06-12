@@ -130,7 +130,12 @@ const PORT = process.env.PORT || 3000;
 
 console.log('Cheguei antes do app.listen');
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, '0.0.0.0', () => {
     console.log(`Servidor rodando na porta ${PORT}`);
-    console.log('Servidor iniciado com sucesso');
 });
+
+server.on('error', (err) => {
+    console.error('ERRO NO SERVIDOR:', err);
+});
+
+console.log('Servidor iniciado com sucesso');
